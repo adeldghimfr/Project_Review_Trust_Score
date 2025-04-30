@@ -36,7 +36,9 @@ Total: ~59,500 reviews across 13 categories.
 📦 Some raw files (e.g., Electronics_5.json, yelpzip.csv) were too large for GitHub and have been excluded.
 
 🖥️ Demo Video
-📺 Watch Demo on YouTube --> https://www.youtube.com/watch?v=eEC36IJWgBY
+📺 Click the image below to watch the project demo:
+
+[![Watch the demo](https://img.youtube.com/vi/eEC36IJWgBY/0.jpg)](https://www.youtube.com/watch?v=eEC36IJWgBY)
 
 🧪 Project Structure
 📁 documents/
