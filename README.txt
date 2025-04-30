@@ -1,60 +1,65 @@
-# ReviewTrust: Scoring the Credibility of Online Product Reviews
-
-📚 A Trusted AI course project at University of South Carolina (CSCE 581)  
+Scoring Trust in Online Product Reviews
+📚 A Trusted AI course project at University of South Carolina (CSCE 581)
 📅 Spring 2025 — by Adel Dghim
 
-## 🔍 Project Summary
+🔍 Project Summary
+This project presents a system that assigns trust scores (from 0 to 1) to product reviews to assess how likely they are to be manipulative or fake. Instead of using binary classification, it uses a continuous score to support nuanced decision-making for consumers and platforms alike.
 
-This project presents a system that assigns **trust scores** (from 0 to 1) to product reviews to assess how likely they are to be manipulative or fake. Instead of using binary classification, it uses a **continuous score** to support nuanced decision-making for consumers and platforms alike.
+A Streamlit interface was developed to demonstrate scraping real Amazon product reviews and displaying model predictions with SHAP explanations.
+⚠️ Note: The demo is not functional outside the author's local setup due to dependencies like ChromeDriver, file paths, and local models.
 
-A working demo allows users to paste an Amazon product URL, scrape reviews, and view trust scores with SHAP-based explanations.
+Method Overview
+Models:
+TF-IDF + Logistic Regression (baseline, interpretable)
 
-## 🧠 Method Overview
+BERT (MiniLM) + Metadata + Random Forest (robust, semantic)
 
-### Models:
-- **TF-IDF + Logistic Regression** (baseline, interpretable)
-- **BERT (MiniLM) + Metadata + Random Forest** (robust, semantic)
+Explainability:
+LIME: Word-level explanation (TF-IDF) & metadata-level explanation (BERT)
 
-### Explainability:
-- **LIME**: Word-level explanation (TF-IDF) & metadata-level explanation (BERT)
-- **SHAP**: Local and global explanations for the BERT model
+SHAP: Local and global explanations for the BERT model
 
-### Dataset:
+Dataset:
 Custom dataset built by combining:
-- Amazon (verified real)
-- YelpZIP
-- Ott et al. corpus (2011)
-- Manually filtered crawl-stage dataset (Kaggle)
-- AI-generated fakes (ChatGPT, Claude, DeepSeek)
+
+Amazon (verified real)
+
+YelpZIP
+
+Ott et al. corpus (2011)
+
+Manually filtered crawl-stage dataset (Kaggle)
+
+AI-generated fakes (ChatGPT, Claude, DeepSeek)
 
 Total: ~59,500 reviews across 13 categories.
+📦 Some raw files (e.g., Electronics_5.json, yelpzip.csv) were too large for GitHub and have been excluded.
 
-## 🖥️ Demo Video
+🖥️ Demo Video
+📺 Watch Demo on YouTube --> https://www.youtube.com/watch?v=eEC36IJWgBY
 
-📺 [Watch Demo on YouTube](https://www.youtube.com/watch?v=eEC36IJWgBY)
+🧪 Project Structure
+📁 documents/
+Final Report (PDF)
 
-## 🧪 Project Structure
+Presentation Slides (PDF)
 
-### 📁 `documents/`
-- Final Report (PDF)
-- Presentation Slides (PDF)
+📁 notebooks/
+BERT_model.ipynb — BERT + RandomForest + SHAP + LIME
 
-### 📁 `notebooks/`
-- `BERT_model.ipynb` — BERT + RandomForest + SHAP + LIME
-- `TFIDF_model.ipynb` — TF-IDF + Logistic Regression + LIME
-- `data_processing.ipynb` — Loads, filters and merges datasets
+TFIDF_model.ipynb — TF-IDF + Logistic Regression + LIME
 
-### 📁 `streamlit_demo/`
-- `app.py` — Streamlit interface with SHAP visualizations
-- `requirements.txt` — Dependencies list
+data_processing.ipynb — Loads, filters and merges datasets
 
-### 📁 `data/`
-- Final CSV dataset used in the run stage (filtered, merged)
+📁 streamlit_demo/
+app.py — Streamlit interface with SHAP visualizations (code only; not executable elsewhere)
 
-## 🏁 How to Run
 
-### 🔧 Install dependencies:
+📁 data/
+Final dataset used at run stage (CSV, preprocessed)
 
-```bash
-pip install -r streamlit_demo/requirements.txt
+
+🏁 How to Run
+⚠️ The demo cannot be run as-is due to local setup and ChromeDriver dependencies.
+Only the interface code (streamlit_demo/app.py) is included for reference.
 ```
