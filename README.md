@@ -14,7 +14,7 @@ A Streamlit interface was developed to demonstrate scraping real Amazon product 
 
 ---
 
-## 🧠 Method Overview
+## Method Overview
 
 ### Models:
 - **TF-IDF + Logistic Regression** (baseline, interpretable)
@@ -44,7 +44,7 @@ Custom dataset built by combining:
 
 ---
 
-## 🧪 Project Structure
+## Project Structure
 
 ### 📁 `documents/`
 - Final Report (PDF)
